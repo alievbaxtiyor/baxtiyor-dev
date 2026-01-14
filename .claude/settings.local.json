@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Rename-Item -Path \"c:\\\\Users\\\\uzer\\\\Desktop\\\\work\\\\frem-music\" -NewName \"baxtiyor.dev\")"
+    ]
+  }
+}

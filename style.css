@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.chat-link {
+    color: #fff;
+    opacity: 0.6;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.chat-link:hover {
+    opacity: 1;
+}
+
+/* Navbar - Dynamic Island Style */
+.navbar {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    padding: 12px 24px;
+    z-index: 50;
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    align-items: center;
+}
+
+.navbar:hover {
+    transform: translateX(-50%) scale(1.02);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #fff;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.navbar-toggle:hover {
+    opacity: 1;
+}
+
+.navbar-toggle i {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.navbar.expanded .navbar-toggle i {
+    transform: rotate(180deg);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    background: rgba(255,255,255,0.1);
+}
+
+.navbar a i {
+    font-size: 20px;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+    .navbar {
+        padding: 10px 14px;
+    }
+
+    .navbar-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        display: none;
+        gap: 4px;
+        margin-left: 8px;
+    }
+
+    .navbar.expanded ul {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 6px;
+    }
+
+    .navbar a i {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+    }
+}
