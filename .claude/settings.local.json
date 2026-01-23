@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(Rename-Item -Path \"c:\\\\Users\\\\uzer\\\\Desktop\\\\work\\\\frem-music\" -NewName \"baxtiyor.dev\")"
+      "Bash(Rename-Item -Path \"c:\\\\Users\\\\uzer\\\\Desktop\\\\work\\\\frem-music\" -NewName \"baxtiyor.dev\")",
+      "Bash(npm install)",
+      "Bash(cmd //c \"rmdir /s /q c:\\\\Users\\\\uzer\\\\Desktop\\\\work\\\\baxtiyor-react\")"
     ]
   }
 }
