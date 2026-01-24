@@ -98,13 +98,33 @@
     }
 
     .navbar ul {
-        display: none;
+        display: flex;
         gap: 4px;
         margin-left: 8px;
+        max-width: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                    opacity 0.3s ease;
     }
 
     .navbar.expanded ul {
-        display: flex;
+        max-width: 300px;
+        opacity: 1;
+    }
+
+    .navbar-divider {
+        max-width: 0;
+        opacity: 0;
+        margin: 0;
+        overflow: hidden;
+        transition: max-width 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+    }
+
+    .navbar.expanded .navbar-divider {
+        max-width: 1px;
+        opacity: 1;
+        margin: 0 8px;
     }
 
     .navbar a {

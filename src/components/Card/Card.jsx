@@ -20,18 +20,23 @@ function Card({ name, description, image, language }) {
           <div className="social-links">
             <a href="https://github.com/alievbaxtiyor" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fi fi-brands-github"></i>
+              <span className="social-label">GitHub</span>
             </a>
             <a href="https://www.linkedin.com/in/baxtiyor-aliyev-8634482b0" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fi fi-brands-linkedin"></i>
+              <span className="social-label">LinkedIn</span>
             </a>
             <a href="https://t.me/alievbaxtiyor" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fi fi-brands-telegram"></i>
+              <span className="social-label">Telegram</span>
             </a>
             <a href="https://instagram.com/baxtiyor.dev" target="_blank" rel="noopener noreferrer" className="social-link">
               <i className="fi fi-brands-instagram"></i>
+              <span className="social-label">Instagram</span>
             </a>
             <a href="mailto:alievbakhtiyorr@gmail.com" className="social-link">
               <i className="fi fi-rr-envelope"></i>
+              <span className="social-label">Email</span>
             </a>
           </div>
           <p className="card-back-hint">{t('hoverHint', language)}</p>

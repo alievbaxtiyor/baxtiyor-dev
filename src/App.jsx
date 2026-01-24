@@ -18,6 +18,7 @@ function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [showAllTools, setShowAllTools] = useState(false);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -181,7 +182,7 @@ function App() {
               <span className="title-solid">{t('premium', language)}</span>
               <span className="title-outline">{t('tools', language)}</span>
             </h2>
-            <div className="tools-grid">
+            <div className={`tools-grid ${showAllTools ? 'expanded' : ''}`}>
               <div className="tool-item">
                 <div className="tool-icon">
                   <img src="/images/BrandHtml5.svg" alt="HTML" />
@@ -273,6 +274,12 @@ function App() {
                 </div>
               </div>
             </div>
+            <button
+              className="tools-toggle"
+              onClick={() => setShowAllTools(!showAllTools)}
+            >
+              <i className={`fi ${showAllTools ? 'fi-rr-angle-up' : 'fi-rr-angle-down'}`}></i>
+            </button>
           </div>
 
           <div className="projects fade-in-section" id="projects" ref={projectsRef}>

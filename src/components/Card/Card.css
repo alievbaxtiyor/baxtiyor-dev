@@ -140,6 +140,10 @@
     display: flex;
 }
 
+.social-label {
+    display: none;
+}
+
 .card-back-skills {
     width: 100%;
 }
@@ -252,5 +256,26 @@
     .skill-tag {
         padding: 6px 12px;
         font-size: 12px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .social-link {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        padding: 12px 16px;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .social-label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
     }
 }

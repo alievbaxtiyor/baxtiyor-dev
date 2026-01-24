@@ -342,6 +342,10 @@
     margin: 0;
 }
 
+.tools-toggle {
+    display: none;
+}
+
 /* Blog Section */
 .blog {
     margin-top: 80px;
@@ -555,6 +559,9 @@
 
     .hero-left {
         position: static;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .hero-right {
@@ -639,24 +646,21 @@
 
     .title-solid,
     .title-outline {
-        font-size: 36px;
-    }
-
-    .title-outline {
-        -webkit-text-stroke: 1px #fff;
+        font-size: 48px;
     }
 
     .hero-description {
         font-size: 14px;
         margin-bottom: 24px;
+        padding: 0 16px;
     }
 
     .stat-number {
-        font-size: 32px;
+        font-size: 48px;
     }
 
     .stat-label {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .hero-stats {
@@ -665,22 +669,32 @@
     }
 
     .hero-skills {
+        flex-direction: column;
         gap: 12px;
+        width: 100%;
     }
 
     .skill-card {
-        min-width: 140px;
-        padding: 16px;
-        border-radius: 12px;
+        width: 100%;
+        min-width: 100%;
+        min-height: 140px;
+        padding: 20px;
+        border-radius: 16px;
     }
 
     .skill-card i {
-        font-size: 24px;
-        margin-bottom: 12px;
+        font-size: 28px;
+        margin-bottom: 14px;
     }
 
     .skill-card h3 {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .skill-card-alt {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .projects,
@@ -711,6 +725,23 @@
     .project-desc,
     .experience-desc {
         font-size: 12px;
+    }
+
+    .experience-item {
+        text-align: left;
+    }
+
+    .experience-arrow {
+        display: none;
+    }
+
+    .experience-info {
+        text-align: left;
+    }
+
+    .experience-company,
+    .experience-desc {
+        text-align: left;
     }
 
     .experience-date {
@@ -752,6 +783,40 @@
 
     .tool-desc {
         font-size: 12px;
+    }
+
+    .tools-grid {
+        max-height: 312px;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .tools-grid.expanded {
+        max-height: 1000px;
+    }
+
+    .tools-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 12px;
+        margin-top: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .tools-toggle:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .tools-toggle i {
+        display: flex;
     }
 
     .blog {
@@ -800,5 +865,22 @@
     .submit-btn {
         padding: 14px;
         font-size: 14px;
+    }
+
+    .contact-form {
+        text-align: left;
+    }
+
+    .form-group {
+        text-align: left;
+    }
+
+    .form-group label {
+        text-align: left;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        text-align: left;
     }
 }
