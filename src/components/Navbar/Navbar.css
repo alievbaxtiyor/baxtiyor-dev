@@ -61,6 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .navbar a:hover {
@@ -75,6 +76,13 @@
     height: 20px;
     align-items: center;
     justify-content: center;
+}
+
+.navbar-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 12px;
 }
 
 /* Mobile responsive */
